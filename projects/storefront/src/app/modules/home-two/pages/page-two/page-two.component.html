@@ -1,0 +1,81 @@
+<app-block-space layout="divider-xs"></app-block-space>
+
+<app-block-slideshow
+    [slides]="[
+        {
+            url: '/shop',
+            desktopImage: 'assets/images/slides/slide-3.jpg',
+            mobileImage: 'assets/images/slides/slide-3-mobile.jpg',
+            offer: '',
+            title: 'Compra tu repuestos<br> con la mejor asesoría.',
+            details: 'Capra en nuestra paguina<br> y <b> recíbelo en tu casa al día siguiente.',
+            buttonLabel: 'Empezar a comprar'
+        }
+    ]"
+></app-block-slideshow>
+
+<app-block-features layout="bottom-strip"></app-block-features>
+
+<app-block-categories
+    [categories]="popularCategories$|async"
+></app-block-categories>
+
+<app-block-space layout="divider-nl"></app-block-space>
+
+<app-block-products-carousel
+    [blockTitle]="'HEADER_FEATURED_PRODUCTS'|translate"
+    layout="grid-5"
+    rows="1"
+    [loading]="this.featuredProducts.loading"
+    [products]="this.featuredProducts.products$|async"
+    [groups]="this.featuredProducts.groups"
+    (changeGroup)="groupChange(featuredProducts, $event)"
+></app-block-products-carousel>
+
+<app-block-space layout="divider-nl"></app-block-space>
+
+<app-block-banners></app-block-banners>
+
+<app-block-space layout="divider-nl"></app-block-space>
+
+<app-block-sale
+    [loading]="blockSale.loading"
+    [products]="blockSale.data$|async"
+></app-block-sale>
+
+<app-block-space layout="divider-nl"></app-block-space>
+
+<app-block-posts-carousel
+    [label]="'HEADER_LATEST_NEWS'|translate"
+    layout="list"
+    [loading]="latestPosts.loading"
+    [posts]="latestPosts.data$|async"
+    [links]="[
+        {label: 'Special Offers', url: '/blog'},
+        {label: 'New Arrivals', url: '/blog'},
+        {label: 'Reviews', url: '/blog'}
+    ]"
+></app-block-posts-carousel>
+ 
+
+  
+<app-block-space class="d-xl-block d-none" layout="divider-nl"></app-block-space>
+<app-block-products-columns
+    [columns]="[
+        {
+            title: 'HEADER_TOP_RATED'|translate,
+            products: columnTopRated$|async
+        },
+        {
+            title: 'HEADER_SPECIAL_OFFERS'|translate,
+            products: columnSpecialOffers$|async
+        },
+        {
+            title: 'HEADER_BESTSELLERS'|translate,
+            products: columnBestsellers$|async
+        }
+    ]"
+></app-block-products-columns> 
+
+<app-block-space layout="divider-nl"></app-block-space>
+

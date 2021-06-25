@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kaufparts-f6a43": {
+      "hosting": {
+        "storefront": [
+          "kaufparts-f6a43"
+        ]
+      }
+    }
+  }
+}
