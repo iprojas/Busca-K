@@ -12,11 +12,13 @@
                             [value]="value.slug"
                             [formControlName]="option.slug"
                         >
-                        <span class="input-radio-label__title">{{ value.name }}</span>
+                        <span class="input-radio-label__title">{{ value.name }} <br> 
+                      
+                        </span>
                     </label>
                 </div>
             </div>
-            <div *ngIf="option.type === 'color'" class="input-radio-color">
+            <div *ngIf="option.type === 'color-delete'" class="input-radio-color">
                 <div class="input-radio-color__list">
                     <label
                         *ngFor="let value of option.values"

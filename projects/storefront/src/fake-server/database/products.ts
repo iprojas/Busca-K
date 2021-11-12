@@ -174,24 +174,14 @@ function makeProducts(defs: ProductDef[]): Product[] {
                     slug: 'material',
                     name: 'Material',
                     values: [
-                        {slug: 'Marca A', name: 'Steel'},
-                        {slug: 'Marca B', name: 'Aluminium'},
-                        {slug: 'Marca C', name: 'Thorium'},
+                        {slug: 'Marca A', name: 'Mercedes Benz', price: '220.230'},
+                        {slug: 'Marca B', name: 'Frasle', price: '130.340'},
+                        {slug: 'Marca C', name: 'Truck Star', price: '84.240'},
                     ],
                 },
-                {
-                    type: 'color',
-                    slug: 'color',
-                    name: 'Color',
-                    values: [
-                        {slug: 'white', name: 'White', color: '#fff'},
-                        {slug: 'yellow', name: 'Yellow', color: '#ffd333'},
-                        {slug: 'red', name: 'Red', color: '#ff4040'},
-                        {slug: 'blue', name: 'Blue', color: '#4080ff'},
-                    ],
-                },
+               
             ],
-            tags: ['Brake Kit', 'Brandix', 'Filter', 'Bumper', 'Transmission', 'Hood'],
+            tags: [],
             categories,
             customFields: {},
         };
