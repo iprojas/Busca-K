@@ -172,7 +172,7 @@ function makeProducts(defs: ProductDef[]): Product[] {
                 {
                     type: 'default',
                     slug: 'material',
-                    name: 'Material',
+                    name: 'Marca',
                     values: [
                         {slug: 'Marca A', name: 'Mercedes Benz', price: '220.230'},
                         {slug: 'Marca B', name: 'Frasle', price: '130.340'},
